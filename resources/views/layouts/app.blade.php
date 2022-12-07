@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Aprendible - @yield('title')</title>
+    <meta name="description" content="@yield('meta-description', 'default meta description goes here')">
 </head>
 
 <body>
