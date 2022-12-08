@@ -34,7 +34,8 @@ Route::view('/about', 'about')->name('about');
 
 // Route::view('/blog', 'blog', ['posts' => $posts])->name('blog');
 // Route::get('/blog', PostController::class)->name('blog');
-Route::get('/blog', [PostController::class, 'index'])->name('blog');
+Route::get('/blog',  [PostController::class, 'index'])->name('blog');
+Route::get('/blog/{id}', [PostController::class, 'show']);
 
 /* Route::post();
 Route::patch();

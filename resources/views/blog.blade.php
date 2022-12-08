@@ -20,8 +20,12 @@
     {{-- @foreach ($posts as $post)
         <h2>{{ $post['title'] }}</h2>
     @endforeach --}}
-    @foreach ($posts as $post)
+    {{-- @foreach ($posts as $post)
         <h1>{{ $post->title }}</h1>
+    @endforeach --}}
+    
+    @foreach ($posts as $post)
+        <h1><a href="/blog/{{ $post->id }}">{{ $post->title }}</a></h1>
     @endforeach
 
 </x-layouts.app>
