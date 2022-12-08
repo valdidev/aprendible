@@ -7,19 +7,21 @@
 @endsection
  --}}
 
- <x-layouts.app
- title="BLOG" 
- meta-description="meta custom desc"
- {{-- sum="2 + 2" --}}
- {{-- :sum="2 + 2" --}}
->
+<x-layouts.app title="BLOG" meta-description="meta custom desc" {{-- sum="2 + 2" --}} {{-- :sum="2 + 2" --}}>
 
- {{-- <x-slot name="title">
+    {{-- <x-slot name="title">
      Home title
  </x-slot> --}}
 
- <x-layouts.nav />
+    <x-layouts.nav />
 
- <h1>BLOG</h1>
+    <h1>BLOG</h1>
+    {{-- @dump($posts) --}}
+    {{-- @foreach ($posts as $post)
+        <h2>{{ $post['title'] }}</h2>
+    @endforeach --}}
+    @foreach ($posts as $post)
+        <h1>{{ $post->title }}</h1>
+    @endforeach
 
 </x-layouts.app>
